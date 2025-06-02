@@ -31,7 +31,42 @@ def task(key):
                 break
             else:
                 print('id not found')
-                
+    elif(key == 4):
+        print("Press 'u' for update or 'a' to add grades")
+        decision = input('Enter the choice: ')
+
+        if decision == 'u':
+            update_id = int(input('Enter student ID: '))
+            found = False  # Track if student is found
+            for student in student_list:
+                if student.id == update_id:
+                    subject = input("Enter the subject: ")
+                    if subject in student.grades:
+                        new_grade = input("Enter the new grade: ")
+                        student.grades[subject] = new_grade
+                        print(f"Grade updated for {subject}")
+                    else:
+                        print("Subject not found in student's grades.")
+                    found = True
+                    break
+            if not found:
+                print("Student ID not found.")
+
+        elif decision == 'a':
+            add_id = int(input("Enter student ID: "))
+            found = False  # Track if student is found
+            for student in student_list:
+                if student.id == add_id:
+                    subject = input("Enter the new subject: ")
+                    grade = input("Enter the grade: ")
+                    student.subjects.append(subject)  # Make sure this is `.subjects`, not `.subject`
+                    student.grades[subject] = grade
+                    print(f"Added subject '{subject}' with grade {grade}")
+                    found = True
+                    break
+            if not found:
+                print("Student ID not found.")
+
 
 
     elif(key==0):
