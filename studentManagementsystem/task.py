@@ -38,12 +38,12 @@ def task(key):
         if decision == 'u':
             update_id = int(input('Enter student ID: '))
             found = False  # Track if student is found
-            for student in student_list:
-                if student.id == update_id:
+            for students in student_list:
+                if students.id == update_id:
                     subject = input("Enter the subject: ")
-                    if subject in student.grades:
+                    if subject in students.grades:
                         new_grade = input("Enter the new grade: ")
-                        student.grades[subject] = new_grade
+                        students.grades[subject] = new_grade
                         print(f"Grade updated for {subject}")
                     else:
                         print("Subject not found in student's grades.")
@@ -55,12 +55,12 @@ def task(key):
         elif decision == 'a':
             add_id = int(input("Enter student ID: "))
             found = False  # Track if student is found
-            for student in student_list:
-                if student.id == add_id:
+            for students in student_list:
+                if students.id == add_id:
                     subject = input("Enter the new subject: ")
                     grade = input("Enter the grade: ")
-                    student.subjects.append(subject)  # Make sure this is `.subjects`, not `.subject`
-                    student.grades[subject] = grade
+                    students.subjects.append(subject)  # Make sure this is `.subjects`, not `.subject`
+                    students.grades[subject] = grade
                     print(f"Added subject '{subject}' with grade {grade}")
                     found = True
                     break
