@@ -1,0 +1,8 @@
+2025-06-10 02:12:10.187839->https://www.google.com-> 200->2025-06-10 02:13:50.554782->https://www.google.com-> reachable200->
+ 2025-06-10 02:14:34.540149->https://www.google.com-> reachable200-> 
+ 2025-06-10 02:14:52.380657->https://www.google.com-> reachable200-> 
+ 2025-06-10 02:21:36.063051->https://www.google.com-> reachable200-> 
+ 2025-06-10 02:26:31.780685->https://www.google.com-> 200-> 
+ 2025-06-10 02:26:31.813176->https://thisurldoesnotexist.bogus-> not reachable-> 
+ 2025-06-10 02:26:31.813176->htp://badurl.com-> invalid format-> 
+ 2025-06-10 02:26:32.297700->https://google.com-> reachable200-> 
